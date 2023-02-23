@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio Đào Quốc Phong</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload right-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Portfolio</a></h1>
+								<span>Đào Quốc Phong</span>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="index.html">Welcome</a></li>
+									<!-- <li>
+										<a href="#">Dropdown</a>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li>
+												<a href="#">Phasellus consequat</a>
+												<ul>
+													<li><a href="#">Lorem ipsum dolor</a></li>
+													<li><a href="#">Phasellus consequat</a></li>
+													<li><a href="#">Magna phasellus</a></li>
+													<li><a href="#">Etiam dolore nisl</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Veroeros feugiat</a></li>
+										</ul>
+									</li> -->
+									<li class="current"><a href="RestaurantAnalysis.html">Restaurant Analysis</a></li>
+									<li><a href="GithubActivities.html">GitHub Activities</a></li>
+									<!-- <li><a href="no-sidebar.html">No Sidebar</a></li> -->
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-medium">
+								<div id="content">
+
+									<!-- Content -->
+										<article>
+
+											<h2>Project Overview</h2>
+
+											<p>In this project, we crawl data from Foody website and ShopeeFood app. The dataset we crawl contains Restaurants, Comments, Dishes, Toppings. Then we model data for better visualization and analysis.</p>
+
+											<h3>Details about Project</h3>
+											<ol><h4>Crawl data from Foody</h4></ol>
+											<p>Frist we crawl data from Foody website using Requests.get() call API and the results are: <br>
+												- A <strong>Restaurant table</strong> contains <strong>101.401 rows</strong> and <strong>33 columns</strong>, with each rows is a restaurant and each column is attribute of the restuarant(close to <strong>130K</strong> restaurant in HCM at that time). <br>
+												- A <strong>Comment table</strong> contains 319.378 rows and 64 columns, with each row is a comment.
+
+											<ol><h4>Crawl data from ShopeeFood app</h4></ol>
+											<p>
+												- <strong>Get API</strong> from ShopeeFood app using <strong>Virtual Android Machine</strong> and <strong>proxy</strong>. <br>
+												- Because ShopeeFood app search for restaurant near your localtion, we draw a grid of longtitude and lattitude over HCM city using Nominatim, like: <br>
+												<img src="images/grid.png" height = "300" width = auto alt="grid image"> <br>
+												- Crawl data by calling ShoppeeFood API, the results: <br>
+												<ol class="sub_list_list">
+													+ A <b>Restaurant table</b> contains <b>80.072</b> rows and <b>21 columns</b>. <br>
+													+ A <b>Dish table</b> contains <b>3.090.871 rows</b> and <b>19 columns</b>. <br>
+													+ A <b>Topping table</b> contains <b>3.295.914 rows</b> and <b>22 columns</b>.
+												</ol>
+												- Opimize crawling process using <b>MultiThreading</b>, <b>reducing</b>  the <b>crawling time</b> from <b>20 hours</b> to <b>2 hours</b> <br>
+												- <b>Cleaning Data</b> and <b>EDA</b> to understand data, <b>write data</b> into <b>SQLite3</b>.
+
+											</p>
+											<ol><h4>Modeling Data</h4></ol>
+												
+											</p>
+
+											<p>
+												- Merge data from Foody and ShopeeFood app. <br>
+												- Design and create table schema for data. <br>
+												- Overall structure of the Database: <br>
+												<img src="images/database.png" height = atuo width = 800 alt="database img"> <br>
+											</p>
+
+											<ol><h4>Visualization </h4></ol>
+											
+											<p>
+												<a href="https://app.powerbi.com/groups/me/reports/1925003b-32bb-463b-b593-7d7307fd9810/ReportSectioncb01f50ab024bdd2e009?ctid=40127cd4-45f3-49a3-b05d-315a43a9f033&bookmarkGuid=f9b5fb9e-dd14-4c96-a3f6-ca390ce32da8">Power BI DashBoard</a><br>
+												- We build a DashBoard where you can search for the restaurant or the meal you want to eat. Or you can enter your location. The result are from the restaurant with 10km radius.
+												
+											</p>
+											<p>
+												<img src="images/RA_DB1.png" height = atuo width = 800 alt="">
+											</p>
+											<p>
+												<img src="images/RA_DB2.png" height = atuo width = 800 alt="">
+											</p>
+											
+											<a href="https://github.com/daoquocphong3/Projects/tree/main/Restaurant%20Analysis%20(long%20project)" class="button icon solid fa-info-circle">More Detail about this Project on GitHub</a>
+										</article>
+
+								</div>
+							</div>
+							<div class="col-4 col-12-medium">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+										<section>
+											<h3>Tools</h3>
+											<li>Google Colab</li>
+											<li>SQLite3</li>
+											<li>Power BI</li>
+											<footer>
+												<a href="https://github.com/daoquocphong3/Projects/tree/main/Restaurant%20Analysis%20(long%20project)" class="button icon solid fa-info-circle">GitHub</a>
+											</footer>
+										</section>
+
+										<!-- <section>
+											<h3>Subheading</h3>
+											<ul class="style2">
+												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+												<li><a href="#">Ornare in hendrerit in lectus</a></li>
+												<li><a href="#">Semper mod quis eget mi dolore</a></li>
+												<li><a href="#">Quam turpis feugiat sit dolor</a></li>
+												<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
+												<li><a href="#">Semper mod quisturpis nisi</a></li>
+											</ul>
+										</section> -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Links -->
+								<!-- <section class="widget links">
+									<h3>Random Stuff</h3>
+									<ul class="style2">
+										<li><a href="#">Etiam feugiat condimentum</a></li>
+										<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+										<li><a href="#">Sed porttitor cras in erat nec</a></li>
+										<li><a href="#">Felis varius pellentesque potenti</a></li>
+										<li><a href="#">Nullam scelerisque blandit leo</a></li>
+									</ul>
+								</section> -->
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Links -->
+								<!-- <section class="widget links">
+									<h3>Random Stuff</h3>
+									<ul class="style2">
+										<li><a href="#">Etiam feugiat condimentum</a></li>
+										<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+										<li><a href="#">Sed porttitor cras in erat nec</a></li>
+										<li><a href="#">Felis varius pellentesque potenti</a></li>
+										<li><a href="#">Nullam scelerisque blandit leo</a></li>
+									</ul>
+								</section> -->
+
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Links -->
+								<!-- <section class="widget links">
+									<h3>Random Stuff</h3>
+									<ul class="style2">
+										<li><a href="#">Etiam feugiat condimentum</a></li>
+										<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+										<li><a href="#">Sed porttitor cras in erat nec</a></li>
+										<li><a href="#">Felis varius pellentesque potenti</a></li>
+										<li><a href="#">Nullam scelerisque blandit leo</a></li>
+									</ul>
+								</section> -->
+								
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Contact -->
+								<section class="widget contact last">
+									<h3>Contact Me</h3>
+									<ul>
+										<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+										<li><a href="https://www.facebook.com/profile.php?id=100009180715262" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.linkedin.com/in/quoc-phong-dao-249a6a15b/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+										<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+										<!-- <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li> -->
+									</ul>
+									<p>daoquocphong3@gmail.com<br />
+									Ho Chi Minh City<br />
+									0393 998 692</p>
+								</section>
+
+						</div>
+					</div>
+					<!-- <div class="row">
+						<div class="col-12">
+							<div id="copyright">
+								<ul class="menu">
+									
+								</ul>
+							</div>
+						</div>
+					</div> -->
+				</footer>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
